@@ -22,7 +22,7 @@ This is a solution to the [Notifications page challenge on Frontend Mentor](http
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/KrishnaVishwakarma1595/notifications-page)
-- Live Site URL: [Live URL](https://krishnavishwakarma1595.github.io/interactive-rating-component/)
+- Live Site URL: [Live URL](https://krishnavishwakarma1595.github.io/notifications-page/)
 
 ## My process
 
