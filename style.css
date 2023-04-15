@@ -21,13 +21,15 @@
     --dark-blue: hsl(224, 21%, 14%);
 }
 
-html, body{ height: 100%; }
+html, body{ min-height: 100vh; }
 
 body{
     background-color: var(--light-grayish-blue);
     display: grid;
     place-items: center;
     place-content: center;
+    margin-top: 50px;
+    padding: 0 20px;
 }
 
 button{ 
@@ -99,12 +101,13 @@ img {
 .notification-count {
     background-color: var(--blue);
     width: 26px;
-    padding: 3px;
+    padding: 2px;
+    line-height: 1.5;
     color: var(--white);
     text-align: center;
     border-radius: 4px;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,11 +117,11 @@ img {
     color: var(--dark-grayish-blue);
     background-color: transparent;
     border: none;
-    font-weight: 600;
+    font-weight: 600;    
 }
 
 .mark-all-read:hover{
-    color: hsl(220,33%,58%)
+    color: hsla(219, 85%, 26%, 0.9)
 }
 
 .notification-list{
@@ -174,8 +177,12 @@ img {
 }
 
 .post {
-    font-weight: 800;
+    font-weight: 900;
     color: var(--dark-grayish-blue);
+}
+
+.post:hover, .group:hover, .username:hover{
+    color: var(--blue);
 }
 
 .notify-circle {
@@ -187,6 +194,23 @@ img {
     margin-left: 3px;
 }
 
+/* .nofitication-message{ 
+    position: relative; 
+    align-self: flex-start;
+} */
+
+/* .notification-list-item-unread .nofitication-message:after{
+    content: '';
+    position: absolute;
+    right: -14px;
+    top: 6px;
+    background-color: var(--red);
+    width: 8px;
+    display: inline-block;
+    height: 8px;
+    border-radius: 50%;
+} */
+
 .notification-time {
     font-size: 15px;
     color: var(--grayish-blue);
@@ -194,7 +218,7 @@ img {
 }
 
 .group{
-    font-weight: 800;
+    font-weight: 900;
     color: var(--blue);
 }
 
@@ -208,10 +232,27 @@ img {
     font-size: 15px;
 }
 
+.private-message:hover{
+    background-color: var(--light-grayish-blue-1);
+}
+
+@media only screen and (max-width: 700px) {
+    .notification-card{
+        width: 100%;
+    }
+}
 @media only screen and (max-width: 425px) {
+    body{
+        padding: 0;
+        margin: 0;
+    }
     .attribution{
         position: relative;
         bottom: unset;
         margin-top: 20px;
+    }
+    .notification-card{
+        padding: 15px;
+        padding-top: 20px;
     }
 }
